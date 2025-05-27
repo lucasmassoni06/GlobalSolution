@@ -1,0 +1,45 @@
+* {
+     margin: 0;
+    padding: 0;
+}
+
+.cabecalho-box {
+    background-color: #0F1B2B;
+    height: 100px;
+    position: relative;
+}
+
+.logo-cabecalho {
+    position: absolute;
+    height: 95px;
+    margin-left: 10px;
+}
+
+.RUA-cabecalho {
+    height: 80px;
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+.rasteamento-cabecalho {
+    height: 80px;
+    position: absolute;
+    margin-left: 310px;
+    margin-top: 10px;
+}
+
+.rodape-box {
+
+    height: 250px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.logo-rodape{
+    height: 50px;
+}
+
