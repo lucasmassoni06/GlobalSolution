@@ -263,21 +263,22 @@ nav {
 #beneficios {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 80px;
     align-items: stretch;
-    margin-top: 150px;
-    margin-bottom: 150px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     flex-wrap: wrap;
 }
 
 #beneficios section{
     background-color: #f9f9f9;
-    padding: 100px 150px;
-    max-width: 600px;
+    padding: 40px 60px;
+    max-width: 500px;
     width: 100%;
     border-radius: 16px;
-    box-shadow: 0 0px 100px rgba(0, 0, 0, 0.26);
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.26);
     transition: transform 0.3 ease;
+    margin: 20px;
 }
 .expansao, .solucao {
     margin: 0;
@@ -289,7 +290,7 @@ nav {
 }
 
 #beneficios h2 {
-   font-size: 4rem;
+   font-size: 2.5rem;
    color: goldenrod;
    margin-bottom: 20px;
    text-align: center;
@@ -297,7 +298,7 @@ nav {
 }
   
 #beneficios p {
-   font-size: 2rem;
+   font-size: 1.5rem;
    color: #333;
    line-height: 1.6;
    margin-bottom: 16px;
