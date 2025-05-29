@@ -308,9 +308,6 @@ nav {
    color: goldenrod;
 }
 
-.prototipo {
-    
-}
 .vantagens {
     padding: 80px 20px;
     background-color: #ffffff;
@@ -359,5 +356,24 @@ nav {
 }
 
 .card-vantagem strong {
+    color: goldenrod;
+}
+
+.prototipo {
+    display: flex;
+}
+
+.prototipo p {
+    margin-top: 100px;
+    margin-left: 60px;
+    font-size: 2rem;
+}
+
+.satelite {
+    max-height: 500px;
+    margin: 30px 50px;
+    border-radius: 8px;
+}
+.prototipo p strong{
     color: goldenrod;
 }
