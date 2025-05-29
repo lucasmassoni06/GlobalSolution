@@ -311,3 +311,53 @@ nav {
 .prototipo {
     
 }
+.vantagens {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.vantagens h2 {
+    color: goldenrod;
+    font-size: 3rem;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+
+.cards-vantagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.card-vantagem {
+    background-color: #f9f9f9;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    max-width: 400px;
+}
+
+.card-vantagem:hover {
+    transform: translateY(-10px);
+}
+
+.card-vantagem h3 {
+    color: goldenrod;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.card-vantagem p {
+    color: #333;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.card-vantagem strong {
+    color: goldenrod;
+}
