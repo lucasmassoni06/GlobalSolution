@@ -82,6 +82,7 @@ nav {
         align-items: center;
         justify-content: space-around;
         transform: translateX(100%);
+        z-index: 3;
     }
     .nav-list  li{
         margin-left: 0;
@@ -136,11 +137,13 @@ nav {
     height: 50px;
 }
 .alvo {
-    background-color: #f9f9f9;
     padding: 80px 0;
-    text-align: center;
 }
 
+.para-quem {
+    margin-top: 30px;
+    display: flex;
+}
 
 .alvos {
     display: grid;
@@ -151,7 +154,7 @@ nav {
 
 .quadrado-alvo {
     background-color: rgb(255, 255, 255);
-    padding: 40px 30px;
+    padding: 150px 30px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
@@ -165,10 +168,15 @@ nav {
 .quadrado-alvo h3 {
     color: goldenrod;
     margin-bottom: 15px;
+    font-size: 2rem;
+}
+.quadrado-alvo p {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
 }
 
 .container-alvo h1 {
-    font-size: 1.1rem; 
+    font-size: 2rem; 
     line-height: 1.6;   
     color: #333; 
     max-width: 800px;
@@ -183,12 +191,12 @@ nav {
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     color: goldenrod;
-    font-size: 2rem;
+    font-size: 4rem;
     text-align: center;
 }
 
 .carro {
-    height: 350px;
+    height: 500px;
     transition: transform 0.3s ease;
     border-radius: 8px;
 }
@@ -253,23 +261,43 @@ nav {
     text-transform: uppercase;
 }
 #beneficios {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: stretch;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    flex-wrap: wrap;
 }
-  
+
+#beneficios section{
+    background-color: #f9f9f9;
+    padding: 100px 150px;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 0px 100px rgba(0, 0, 0, 0.26);
+    transition: transform 0.3 ease;
+}
+.expansao, .solucao {
+    margin: 0;
+    flex: 1;
+}
+
+#beneficios section:hover{
+    transform: translateY(-5px);
+}
+
 #beneficios h2 {
-   font-size: 2rem;
+   font-size: 4rem;
    color: goldenrod;
    margin-bottom: 20px;
    text-align: center;
+   text-transform: uppercase;
 }
   
 #beneficios p {
-   font-size: 1.1rem;
+   font-size: 2rem;
    color: #333;
    line-height: 1.6;
    margin-bottom: 16px;
