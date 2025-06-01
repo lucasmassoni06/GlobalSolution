@@ -4,8 +4,66 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+:root {
+    --background-color: #fff;
+    --text-color: #333;
+    --heading-color: goldenrod;
+    --header-bg: #0F1B2B;
+    --card-bg: #f9f9f9;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --card-border: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+/* Classes de tema */
+body.tema-escuro {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --heading-color: #ffd149;
+    --header-bg: #000000;
+    --card-bg: #1e1e1e;
+    --card-shadow: rgba(0, 0, 0, 0.3);
+    --card-border: rgba(255, 255, 255, 0.1);
+}
+
+body.tema-azul {
+    --background-color: #0a1929;
+    --text-color: #e0e0e0;
+    --heading-color: #ffc857;
+    --header-bg: #051323;
+    --card-bg: #0f2942;
+    --card-shadow: rgba(0, 0, 0, 0.3);
+    --card-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Alternador de Tema */
+.alternador-de-tema {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.botao-tema {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid var(--card-border);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.botao-tema:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 nav a{
-    color: goldenrod;
+    color: var(--heading-color);
     text-decoration: none;
     transition: 0.3s;
 }
@@ -25,38 +83,38 @@ nav {
     justify-content: space-around;
     align-items: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #0F1B2B;
+    background-color: var(--header-bg);
     height: 8vh;
 }
 
-.nav-list {
+.lista-nav {
     list-style: none;
     display: flex;
     color: white;
 
 }
 
-.nav-list li {
+.lista-nav li {
     letter-spacing: 3px;
     margin-left: 32px;
     margin-top: 20px;
 }
 
-.mobile-menu{
+.menu-mobile{
     position: absolute;
     top: 20px;
     right: 30px;
     display: none;
     cursor: pointer;
 }
-.mobile-menu div {
+.menu-mobile div {
     width: 32px;
     height: 2px;
     background-color: #ffff;
     margin: 8px;
 }
 
-@keyframes navLinkFade {
+@keyframes animacaoLinkNav {
     from {
         opacity: 0;
         transform: translateX(50px);
@@ -71,7 +129,7 @@ nav {
     body {
         overflow-x: hidden;
     }
-    .nav-list{
+    .lista-nav{
         position: absolute;
         top: 8vh;
         right: 0;
@@ -84,11 +142,11 @@ nav {
         transform: translateX(100%);
         z-index: 3;
     }
-    .nav-list  li{
+    .lista-nav li{
         margin-left: 0;
         opacity: 0;
     }
-     .mobile-menu {
+     .menu-mobile {
         display: block;
      }
 }
@@ -97,17 +155,17 @@ nav {
     color: white;
 }
 
-.nav-list.active{
+.lista-nav.ativo{
     transform: translateX(0);
 }
 
-.logo-container {
+.container-logo {
     margin-left: -80px;
     margin-top: 15px;
 }
 
-.cabecalho-box {
-    background-color: #0F1B2B;
+.caixa-cabecalho {
+    background-color: var(--header-bg);
     height: 100px;
 }
 
@@ -153,12 +211,12 @@ nav {
 }
 
 .quadrado-alvo {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--card-bg);
     padding: 150px 30px;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px var(--card-shadow);
     transition: transform 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.281);
+    border: 1px solid var(--card-border);
 }
 
 .quadrado-alvo:hover {
@@ -166,7 +224,7 @@ nav {
 }
 
 .quadrado-alvo h3 {
-    color: goldenrod;
+    color: var(--heading-color);
     margin-bottom: 15px;
     font-size: 2rem;
 }
@@ -178,7 +236,7 @@ nav {
 .container-alvo h1 {
     font-size: 2rem; 
     line-height: 1.6;   
-    color: #333; 
+    color: var(--text-color); 
     max-width: 800px;
     margin: 20px auto; 
     font-weight: 400; 
@@ -190,7 +248,7 @@ nav {
 .container-alvo h2{
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
-    color: goldenrod;
+    color: var(--heading-color);
     font-size: 4rem;
     text-align: center;
 }
@@ -271,12 +329,12 @@ nav {
 }
 
 #beneficios section{
-    background-color: #f9f9f9;
+    background-color: var(--card-bg);
     padding: 40px 60px;
     max-width: 500px;
     width: 100%;
     border-radius: 16px;
-    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.26);
+    box-shadow: 0 0px 30px var(--card-shadow);
     transition: transform 0.3 ease;
     margin: 20px;
 }
@@ -299,7 +357,7 @@ nav {
   
 #beneficios p {
    font-size: 1.5rem;
-   color: #333;
+   color: var(--text-color);
    line-height: 1.6;
    margin-bottom: 16px;
 }
@@ -310,7 +368,7 @@ nav {
 
 .vantagens {
     padding: 80px 20px;
-    background-color: #ffffff;
+    background-color: var(--background-color);
     text-align: center;
 }
 
@@ -329,11 +387,11 @@ nav {
 }
 
 .card-vantagem {
-    background-color: #f9f9f9;
+    background-color: var(--card-bg);
     padding: 40px 30px;
     border-radius: 16px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px var(--card-shadow);
+    border: 1px solid var(--card-border);
     transition: transform 0.3s ease;
     max-width: 400px;
 }
@@ -349,7 +407,7 @@ nav {
 }
 
 .card-vantagem p {
-    color: #333;
+    color: var(--text-color);
     font-size: 1.3rem;
     line-height: 1.6;
     text-align: justify;
