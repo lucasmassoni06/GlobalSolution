@@ -27,6 +27,11 @@
                 <li><a href="/src/pages/quiz.html"  class="inicio">Quiz</a></li>
                 <li><a href="/src/pages/contato.html">Contato</a></li>
             </ul>
+            <div class="theme-switcher">
+                <button class="theme-btn" style="background-color: #fff; color: #333;" onclick="document.dispatchEvent(new CustomEvent('switchTheme', {detail: 'default'}))">Tema Claro</button>
+                <button class="theme-btn" style="background-color: #121212; color: #fff;" onclick="document.dispatchEvent(new CustomEvent('switchTheme', {detail: 'dark'}))">Tema Escuro</button>
+                <button class="theme-btn" style="background-color: #0a1929; color: #fff;" onclick="document.dispatchEvent(new CustomEvent('switchTheme', {detail: 'blue'}))">Tema Azul</button>
+            </div>
         </nav>
     </header>
     <main>
