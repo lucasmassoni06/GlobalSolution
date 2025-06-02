@@ -20,7 +20,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Classes de tema */
 body.tema-escuro {
     --background-color: #121212;
     --text-color: #e0e0e0;
@@ -41,7 +40,6 @@ body.tema-azul {
     --card-border: rgba(255, 255, 255, 0.1);
 }
 
-/* Alternador de Tema */
 .alternador-de-tema {
     display: flex;
     align-items: center;
@@ -587,4 +585,78 @@ nav {
 
 #radio4:checked ~ .navegacao-auto .auto-button4{
     background-color: white;
+}
+
+
+
+/*Personalizacao QUIZ*/
+
+
+
+.app{
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    margin-bottom: 100px;
+    padding: 30px;
+    border: rgba(0, 0, 0, 0.664) solid 1px;
+}
+
+.app h1 {
+    border-bottom: 1px solid #333;
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+
+.quiz {
+    padding: 20px 0;
+}
+
+.quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.button-quiz{
+    background: white;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition:all 0.3s;
+}
+
+.button-quiz:hover:not([disabled]){
+    background: #222;
+    color: white;
+}
+
+.button-quiz:disabled{
+    cursor: no-drop;
+}
+
+#button-proximo {
+    background-color: #0a1929;
+    color: white;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 10px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.correct {
+    background-color: #9aeabd;
+}
+
+.incorrect {
+    background-color: #ff9393;
 }

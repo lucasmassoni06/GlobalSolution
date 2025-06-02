@@ -5,7 +5,7 @@ class MobileNavBar {
         this.navLinks = document.querySelectorAll(navLinks);
         this.activeClass = "active";
 
-        // bind para preservar o contexto
+      
         this.handleClick = this.handleClick.bind(this);
     }
 
@@ -13,7 +13,7 @@ class MobileNavBar {
         this.navList.classList.toggle(this.activeClass);
         this.mobileMenu.classList.toggle(this.activeClass);
 
-        // Animação de links
+      
         this.navLinks.forEach((link, index) => {
             link.style.animation
                 ? (link.style.animation = "")
