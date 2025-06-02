@@ -43,16 +43,21 @@ body.tema-azul {
 .alternador-de-tema {
     display: flex;
     align-items: center;
-    margin-left: 20px;
+    justify-content: center;
+    margin: 0;
+    position: absolute;
+    top: 15px;
+    right: 80px;
 }
 
 .botao-tema {
     padding: 5px 10px;
-    margin: 0 5px;
+    margin: 0 3px;
     border: 1px solid var(--card-border);
     border-radius: 4px;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
+    font-size: 0.8rem;
 }
 
 .botao-tema:hover {
